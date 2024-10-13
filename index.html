@@ -7,14 +7,21 @@
     <link rel="stylesheet" href="./style.css">
 </head>
 <body>
+    <div class="stopwatch-container">
+        <h1 class="title">
+            Stopwatch
+        </h1>
+
+   
     <div class="stopwatch">
-        <h1 id="timer">00:00:00</h1>
+        <h1 id="timer" class="timer-display">00:00:00</h1>
         <div class="buttons">
             <button id="startBtn" onclick="startTimer()">Start</button>
             <button id="pauseBtn" onclick="pauseTimer()" disabled>Pause</button>
             <button id="resetBtn" onclick="resetTimer()" disabled>Reset</button>
         </div>
     </div>
+</div>
     <script src="./first.js"></script>
 </body>
 </html>
