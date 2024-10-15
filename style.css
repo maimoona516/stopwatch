@@ -71,7 +71,10 @@ body {
     background-color: #f44336;
     color: white;
 }
+#continueBtn { background-color: #3639f4;
+    color: white;
 
+}
 button:disabled {
     background-color: #ccc;
     cursor: not-allowed;
