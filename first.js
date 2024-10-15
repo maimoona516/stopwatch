@@ -60,6 +60,6 @@ function resetTimer() {
     timeElapsed = 0;
     document.getElementById("timer").innerText = "00:00:00";
     document.getElementById("startBtn").style.display = "inline-block";
-    document.getElementById("pauseBtn").disabled = true;
-    document.getElementById("resetBtn").disabled = true;
+    document.getElementById("pauseBtn").disabled = false;
+    document.getElementById("resetBtn").disabled = false;
 }

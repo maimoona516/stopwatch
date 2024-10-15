@@ -5,8 +5,10 @@ body {
     align-items: center;
     height: 100vh;
     margin: 0;
-    background-color: lightslategray;
+    background: linear-gradient(to right, #198b8b, #12465a, rgb(10, 107, 167));
+
 }
+
 .stopwatch-container { text-align: center;
     background-color: #fff;
     padding: 30px;
@@ -15,14 +17,27 @@ body {
     max-width: 350px;
     width: 100%;
     margin: 0 auto;
-
-
 }
+#stopwatch-container:hover {box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);}
+
 .title {
     font-size: 24px;
     color: #333;
     margin-bottom: 20px;
 }
+@keyframes blink {
+    0% { opacity: 1;}
+    50% {opacity: 0;}
+    100% {opacity: 1;}
+}
+@keyframes moveUpDown {
+    0% {
+        transform: translateY(0);
+    }
+    50% {transform: translateY(-20PX);}
+    100% {transform:translateY(0) ;}
+}
+.blink-heading{animation: blink 2s infinite ,moveUpDown 3s infinite;}
 .stopwatch {
     text-align: center;
     background-color: #fff;
@@ -33,15 +48,25 @@ body {
 }
 
 #timer {
-    font-size: 48px;
+    font-size: 40px;
     margin-bottom: 20px;
     letter-spacing: 2px;
+    animation: fade-in 0.5ss ease;
 }
 .timer-display {
     font-size: 60px;
     color: #333;
     letter-spacing: 3px;
     margin-bottom: 30px;
+   
+}
+@keyframes fade-in {
+    0%{opacity: 0;
+        transform:translateY(-10px) ;}
+        100% {
+            opacity: 1;
+            transform: translateY(0);
+        }
 }
 .buttons {
     display: flex;
@@ -55,23 +80,25 @@ body {
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    transition: background-color 0.3s , transform 0.2s;
 }
+button:active {transform: scale(0.95);}
 
 #startBtn {
-    background-color: #28a745;
+    background-color:  rgb(10, 107, 167);
     color: #fff;
 }
 
 #pauseBtn {
-    background-color: #ff9800;
+    background-color: #12465a;
     color: white;
 }
 
 #resetBtn {
-    background-color: #f44336;
+    background-color: #12465a;
     color: white;
 }
-#continueBtn { background-color: #3639f4;
+#continueBtn { background-color:#12465a;
     color: white;
 
 }
@@ -84,13 +111,13 @@ button:hover {transform: scale(1.05);
 
 }
 #startBtn:hover {
-    background-color:  #218838;
+    background-color:   rgb(10, 107, 167);
 }
 #pauseBtn:hover {
-    background-color:  #e0a800;
+    background-color:  #198b8b;
 }
 #resetBtn:hover {
-    background-color:  #c82333;
+    background-color: #198b8b;
 }
 
 button:active {transform: scale(0.98);}
