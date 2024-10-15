@@ -44,8 +44,10 @@ function pauseTimer() {
 function continueTimer() {
     if (!isRunning) {
         isRunning = true;
+        document.getElementById("startBtn").style.display = "none"; 
         document.getElementById("continueBtn").style.display = "none";
-        document.getElementById("pauseBtn").style.display = "inline-block";  // Show Pause button again
+        document.getElementById("pauseBtn").style.display = "inline-block"; 
+         // Show Pause button again
 
         const startTime = Date.now() - timeElapsed;
         timer = setInterval(() => {
@@ -60,6 +62,8 @@ function resetTimer() {
     timeElapsed = 0;
     document.getElementById("timer").innerText = "00:00:00";
     document.getElementById("startBtn").style.display = "inline-block";
-    document.getElementById("pauseBtn").disabled = false;
+    document.getElementById("continueBtn").style.display = "none";
+    document.getElementById("pauseBtn").style.display = "inline-block";
     document.getElementById("resetBtn").disabled = false;
 }
+
